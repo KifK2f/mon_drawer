@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mon_drawer/widgets/first_page.dart';
 
-import 'model/tabs.dart';
+import '../model/tabs.dart';
 // import 'package:pop_up_et_nav/model/tabs.dart';
 // import 'package:pop_up_et_nav/widgets/first_page.dart';
 // import 'package:pop_up_et_nav/widgets/body.dart';
@@ -22,7 +23,7 @@ class HomeState extends State<HomePage> {
   int index = 0;
 
   final List<Tabs> _tabs =  [
-    Tabs(name: "Accueil", widget: const Center(child: Text("Page Accueil "),)),
+    Tabs(name: "Accueil", widget: const FirstPage()),
     Tabs(name: "Réalisations", widget: const Center(child: Text("Page Réalisation"),)),
   ];
 
@@ -30,9 +31,13 @@ class HomeState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Pop Up et Nav"),
+          title: const Text("Mon jardin idéal",  style: TextStyle(color: Colors.white),),
           centerTitle: true,
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          //Change rla couleur des icones dont celui du Drawer
+          iconTheme: IconThemeData(
+            color: Colors.white,
+          ),
         ),
         drawer: Drawer(
           child: ListView(
