@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mon_drawer/widgets/first_page.dart';
+import 'package:mon_drawer/widgets/second_page.dart';
 
 import '../model/tabs.dart';
 // import 'package:pop_up_et_nav/model/tabs.dart';
@@ -24,7 +25,7 @@ class HomeState extends State<HomePage> {
 
   final List<Tabs> _tabs =  [
     Tabs(name: "Accueil", widget: const FirstPage()),
-    Tabs(name: "Réalisations", widget: const Center(child: Text("Page Réalisation"),)),
+    Tabs(name: "Réalisations", widget: const SecondPage()),
   ];
 
   @override
